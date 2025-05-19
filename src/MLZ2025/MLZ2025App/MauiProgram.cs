@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
-using MLZ2025.ViewModel;
+using MLZ2025.Core.Services;
+using MLZ2025.Core.ViewModel;
 
 namespace MLZ2025;
 
@@ -16,12 +17,7 @@ public static class MauiProgram
                 fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
             });
 
-        builder.Services
-            .AddSingleton<MainPage>()
-            .AddSingleton<MainViewModel>()
-            .AddTransient<DetailPage>()
-            .AddTransient<DetailViewModel>()
-            .AddSingleton(Connectivity.Current);
+        builder.Services.AddCoreServices();
 
 #if DEBUG
         builder.Logging.AddDebug();
