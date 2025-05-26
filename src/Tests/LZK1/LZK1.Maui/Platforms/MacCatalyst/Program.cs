@@ -1,7 +1,4 @@
-﻿using ObjCRuntime;
-using UIKit;
-
-namespace LZ1.App;
+﻿namespace LZ1.App.Platforms.MacCatalyst;
 
 public class Program
 {

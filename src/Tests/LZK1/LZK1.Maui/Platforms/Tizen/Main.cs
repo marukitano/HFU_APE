@@ -1,8 +1,4 @@
-using System;
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-
-namespace LZ1.App;
+namespace LZ1.App.Platforms.Tizen;
 
 class Program : MauiApplication
 {

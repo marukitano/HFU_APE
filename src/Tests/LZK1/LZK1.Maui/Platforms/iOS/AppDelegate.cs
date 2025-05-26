@@ -1,6 +1,4 @@
-﻿using Foundation;
-
-namespace LZ1.App;
+﻿namespace LZ1.App.Platforms.iOS;
 
 [Register("AppDelegate")]
 public class AppDelegate : MauiUIApplicationDelegate

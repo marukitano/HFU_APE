@@ -1,29 +1,37 @@
-using LZ1.Core.Services;
-using Microsoft.Extensions.DependencyInjection;
+using LZK1.Core.Services;
 
-namespace LZ1.Core.Tests;
+namespace LZK1.Core.Tests;
 
-[TestFixture]
-public class CounterStateTests : TestsBase
+public class CounterStateTests
 {
     [Test]
     public void TestIncrement()
     {
-        var provider = CreateProvider();
-        var counterState = provider.GetRequiredService<ICounterState>();
+        var state = new CounterState();
 
-        Assert.That(counterState.Count, Is.EqualTo(0));
+        state.Increment();
 
-        counterState.Increment();
-
-        Assert.That(counterState.Count, Is.EqualTo(1));
+        Assert.That(state.Count, Is.EqualTo(1));
     }
 
     [Test]
     public void TestDecrement()
     {
-        // TODO Write a test for counterState.Decrement()
+        var state = new CounterState();
 
-        Assert.Inconclusive("This test is not implemented.");
+        state.Increment();  // Zähler = 1
+        state.Decrement();  // Zähler = 0
+
+        Assert.That(state.Count, Is.EqualTo(0));
+    }
+
+    [Test]
+    public void TestDecrement_DoesNotGoNegative()
+    {
+        var state = new CounterState();
+
+        state.Decrement();  // Zähler ist 0, darf nicht negativ werden
+
+        Assert.That(state.Count, Is.EqualTo(0));
     }
 }

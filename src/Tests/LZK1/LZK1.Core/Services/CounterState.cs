@@ -1,6 +1,6 @@
-namespace LZ1.Core.Services;
+namespace LZK1.Core.Services;
 
-internal class CounterState : ICounterState
+public class CounterState : ICounterState
 {
     public int Count { get; private set; }
 
@@ -8,4 +8,13 @@ internal class CounterState : ICounterState
     {
         Count += 1;
     }
+
+    public void Decrement()
+    {
+        if (Count > 0)
+        {
+            Count -= 1;
+        }
+    }
+
 }

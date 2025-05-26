@@ -1,7 +1,7 @@
-using LZ1.Core.Services;
+using LZK1.Core.Services;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace LZ1.Core.Tests;
+namespace LZK1.Core.Tests;
 
 public class TestsBase
 {

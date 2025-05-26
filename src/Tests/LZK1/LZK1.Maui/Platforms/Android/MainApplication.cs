@@ -1,7 +1,4 @@
-﻿using Android.App;
-using Android.Runtime;
-
-namespace LZ1.App;
+﻿namespace LZ1.App.Platforms.Android;
 
 [Application]
 public class MainApplication : MauiApplication

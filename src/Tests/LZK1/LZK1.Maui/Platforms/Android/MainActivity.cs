@@ -1,8 +1,4 @@
-﻿using Android.App;
-using Android.Content.PM;
-using Android.OS;
-
-namespace LZ1.App;
+﻿namespace LZ1.App.Platforms.Android;
 
 [Activity(Theme = "@style/Maui.SplashTheme", MainLauncher = true,
     ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode |

@@ -1,4 +1,4 @@
-﻿namespace LZ1.Core.Services;
+﻿namespace LZK1.Core.Services;
 
 public interface IDialogService
 {
